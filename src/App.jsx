@@ -8,15 +8,30 @@ import ResolveTasks from './ResolveTasks';
 const promiseData = fetch("/data.json").then(res=>res.json());
 
 function App() {
+
   
-  const[tickets,setTickets] = useState([]);
+ const [tickets, setTickets] = useState([]); // Active tickets
+  const [resolvedCount, setResolvedCount] = useState(0);
+  const [completedIds, setCompletedIds] = useState([]); // Completed tickets IDs
   
-  const removeItem =(r)=>{
-   
-   const filteredData = tickets.filter(pro => pro.id!==r.id);
-    setTickets(filteredData);
+
+
+  // Add ticket (from ShowTickets)
+  const addTicket = (show) => {
+    if (!tickets.some(t => t.id === show.id) && !completedIds.includes(show.id)) {
+      setTickets([...tickets, show]);
+    }
+  };
+
   
-  }
+  const removeItem = (r) => {
+    
+    setTickets(tickets.filter(pro => pro.id !== r.id));
+    setResolvedCount(prev => prev + 1);
+
+    setCompletedIds([...completedIds, r.id]); 
+  };
+  
   
 
 
@@ -68,7 +83,7 @@ function App() {
    <div className=' h-[250px] bg-linear-to-r from-[#54CF68] to-[#00827A] rounded-xl flex justify-center items-center' >
     <div className='text-center'>
       <p className='text-[24px] text-white'>Resolve</p>
-    <h1 className='text-3xl font-semibold text-white'>0</h1>
+    <h1 className='text-3xl font-semibold text-white'>{resolvedCount}</h1>
     </div>
    </div>
  
@@ -80,7 +95,9 @@ function App() {
   <p className='text-[24px] font-semibold text-[#34485A] mb-5'>Customer Tickets</p>
   <div className='grid grid-cols-2 gap-5'>
    <Suspense fallback="Loading...">
-    <ShowTickets tickets={tickets} setTickets={setTickets} promiseData={promiseData}></ShowTickets>
+    <ShowTickets promiseData={promiseData} 
+        addTicket={addTicket}
+        completedIds={completedIds}></ShowTickets>
    </Suspense>
   </div>
   </section>

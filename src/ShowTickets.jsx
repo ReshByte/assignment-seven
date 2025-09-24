@@ -1,16 +1,19 @@
 import React, { use } from 'react';
 import dateImg from './assets/ri_calendar-line.png';
-const ShowTickets = ({promiseData,tickets,setTickets}) => {
-    const shows = use(promiseData);
 
 
-   const handleTickets=(data)=>{
-         setTickets([...tickets,data])
-    }
-    
+
+const ShowTickets = ({ promiseData, addTicket, completedIds }) => {
+  const shows = use(promiseData);
+
+  // Filter out only completed tickets
+  const availableShows = shows.filter(show => 
+    !completedIds.includes(show.id)
+  );
+
     return (
-     shows.map(show => 
-           <div onClick={()=>handleTickets(show)} className='p-5 border-0 cursor-pointer bg-white shadow-xl rounded-xl'>
+     availableShows.map(show => 
+           <div onClick={()=>addTicket(show)} className='p-5 border-0 cursor-pointer bg-white shadow-xl rounded-xl'>
          <div className='flex justify-between items-center'>
             <h2 className='text-[18px] text-[#001931] font-medium'>{show.title}</h2>
             <p className='font-medium'>{show.status}</p>

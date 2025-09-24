@@ -5,6 +5,7 @@ const RemoveShowTickets = ({ticket,removeItem}) => {
 
 const handleCompleteBtn =()=>{
    removeItem(ticket);
+ 
    
 }
 
