@@ -4,7 +4,9 @@ import './App.css'
 import ShowTickets from './ShowTickets';
 import TaskStatus from './TaskStatus';
 import ResolveShow from './ResolveShow';
-  import { toast, ToastContainer} from 'react-toastify';
+import { toast, ToastContainer} from 'react-toastify';
+import img1 from './assets/vector1.png';
+
 
 
 
@@ -81,18 +83,35 @@ function App() {
 </div>
 
 <div className='w-11/12 mx-auto mt-[80px] grid grid-cols-2 gap-10 '>
-   <div className='bg-design h-[250px]   rounded-xl flex justify-center items-center ' >
-   {/* <img className='border-1 border-amber-600 text-left' src={logImg} alt="" /> */}
+   <div className='bg-design h-[250px] bg-linear-to-r from-[#632EE3] to-[#9F62F2]  rounded-xl flex justify-center items-center ' >
+   
     <div className='text-center mx-auto'>
       <p className='text-[24px] text-white'>In-Progress</p>
     <h1 className='text-3xl font-semibold text-white'>{tickets.length}</h1>
+    <div>
+      <div className='absolute top-36 left-16'>
+      <img src={img1} alt="" />
     </div>
+    <div className='absolute transform scale-x-[-1] left-107 top-36'>
+      <img src={img1} alt="" />
+    </div>
+    </div>
+    </div>
+    
    
    </div>
    <div className=' h-[250px] bg-linear-to-r from-[#54CF68] to-[#00827A] rounded-xl flex justify-center items-center' >
     <div className='text-center'>
       <p className='text-[24px] text-white'>Resolve</p>
     <h1 className='text-3xl font-semibold text-white'>{resolvedCount}</h1>
+     <div>
+      <div className='absolute top-36 left-194'>
+      <img src={img1} alt="" />
+    </div>
+    <div className='absolute transform scale-x-[-1] left-286 top-36'>
+      <img src={img1} alt="" />
+    </div>
+    </div>  
     </div>
    </div>
  
@@ -130,31 +149,34 @@ function App() {
 
 
 <div>
-  <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+  <footer className="footer  sm:footer-horizontal bg-neutral text-neutral-content p-10 border-b-1 border-gray-00">
   <nav>
-    <a href="">HIii</a>
+    <h2 className='text-white text-[20px]'>CS — Ticket System</h2>
+    <p className='text-[#A1A1AA]'>Lorem Ipsum is simply dummy text of the <br /> printing and typesetting industry. Lorem <br /> Ipsum has been the industry's standard <br /> dummy text ever since the 1500s, when an <br /> unknown printer took a galley of type and <br /> scrambled it to make a type specimen book.</p>
   </nav>
   <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
+    <h2 className="text-white text-[20px]">Company</h2>
+    <a className="link link-hover text-[#A1A1AA]">About Us</a>
+    <a className="link link-hover text-[#A1A1AA]">Our Mission</a>
+    <a className="link link-hover text-[#A1A1AA]">Contact Saled</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+    <h2 className="text-white text-[20px]">Services</h2>
+    <a className="link link-hover text-[#A1A1AA]">Products & Services</a>
+    <a className="link link-hover text-[#A1A1AA]">Customer Stories</a>
+    <a className="link link-hover text-[#A1A1AA]">Download Apps</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
+    <h2 className="text-white text-[20px]">Information</h2>
+    <a className="link link-hover text-[#A1A1AA]">Privacy Policy</a>
+    <a className="link link-hover text-[#A1A1AA]">Terms & Conditions</a>
+    <a className="link link-hover text-[#A1A1AA]">Join Us</a>
   </nav>
+
+  
 </footer>
+<p className='bg-black text-white py-5 text-center'>© 2025 CS — Ticket System. All rights reserved.</p>
+
 </div>
 
 
