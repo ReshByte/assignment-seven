@@ -25,7 +25,7 @@ function App() {
   const addTicket = (show) => {
     if (!tickets.some(t => t.id === show.id) && !completedIds.includes(show.id)) {
       setTickets([...tickets, show]);
-      toast('Tickets Added')
+      toast('In-Progress!')
     }
   };
   
@@ -37,7 +37,7 @@ function App() {
     setResolvedCount(prev => prev + 1);
     
     setCompletedIds([...completedIds, r.id]); 
-    toast('Remove ticket')
+    toast('Completed!')
     console.log(completedIds);
   };
   
@@ -47,13 +47,13 @@ function App() {
   return (
     <>
      <div className="navbar shadow-sm !bg-white">
- <div className='max-sm:flex-col  md:w-11/12 mx-auto flex items-center justify-between '>
+ <div className='max-sm:flex-col  md:w-11/12 mx-auto flex justify-between items-center'>
    <div className="">
    
     <a className="btn-ghost text-xl text-black font-medium">CS — Ticket System</a>
   </div>
  
-  <div className="max-sm:flex flex-col text-center gap-5 pr-7 mt-5">
+  <div className="max-sm:flex flex-col text-center gap-5 pr-7 mt-5 md:mt-0">
     <a href="" className='text-black ml-[32px]'>Home</a>
     <a href="" className='text-black ml-[32px]'>FAQ</a>
     <a href="" className='text-black ml-[32px]'>Changelog</a>
