@@ -75,7 +75,7 @@ function App() {
       <div className='max-sm:hidden md:absolute top-36 left-16'>
       <img src={img1} alt="" />
     </div>
-    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-107 top-36'>
+    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-110 top-36'>
       <img src={img1} alt="" />
     </div>
     </div>
@@ -91,7 +91,7 @@ function App() {
       <div className='max-sm:hidden md:absolute top-36 left-194'>
       <img src={img1} alt="" />
     </div>
-    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-286 top-36'>
+    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-289 top-36'>
       <img src={img1} alt="" />
     </div>
     </div>  
