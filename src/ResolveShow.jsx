@@ -25,7 +25,7 @@ const ResolveShow = ({ completedIds }) => {
           <div key={item.id} className="p-3 mb-2 rounded-sm border-0 bg-[#ccfddd]">
             <h2 className="text-black font-medium ">{item.title}</h2>
            <div className="flex justify-between">
-             <p className="text-[#0B5E06] font-medium">Completed</p>
+             <p className="text-[#0B5E06] font-medium ">Completed</p>
             <p>Click To Remove</p>
            </div>
           </div>

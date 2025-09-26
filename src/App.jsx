@@ -49,28 +49,11 @@ function App() {
      <div className="navbar shadow-sm !bg-white">
  <div className='max-sm:flex-col  md:w-11/12 mx-auto flex items-center justify-between '>
    <div className="">
-    {/* <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div> */}
-    <a className="btn btn-ghost text-xl text-black font-medium">CS — Ticket System</a>
+   
+    <a className="btn-ghost text-xl text-black font-medium">CS — Ticket System</a>
   </div>
  
-  <div className="max-sm:flex flex-col text-center gap-5">
+  <div className="max-sm:flex flex-col text-center gap-5 pr-7 mt-5">
     <a href="" className='text-black ml-[32px]'>Home</a>
     <a href="" className='text-black ml-[32px]'>FAQ</a>
     <a href="" className='text-black ml-[32px]'>Changelog</a>
@@ -89,10 +72,10 @@ function App() {
       <p className='text-[24px] text-white'>In-Progress</p>
     <h1 className='text-3xl font-semibold text-white'>{tickets.length}</h1>
     <div>
-      <div className='absolute top-36 left-16'>
+      <div className='max-sm:hidden md:absolute top-36 left-16'>
       <img src={img1} alt="" />
     </div>
-    <div className='absolute transform scale-x-[-1] left-107 top-36'>
+    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-107 top-36'>
       <img src={img1} alt="" />
     </div>
     </div>
@@ -100,15 +83,15 @@ function App() {
     
    
    </div>
-   <div className=' h-[250px] bg-linear-to-r from-[#54CF68] to-[#00827A] rounded-xl flex justify-center items-center' >
+   <div className='  md:h-[250px] bg-linear-to-r from-[#54CF68] to-[#00827A] rounded-xl flex justify-center items-center' >
     <div className='text-center'>
       <p className='text-[24px] text-white'>Resolve</p>
     <h1 className='text-3xl font-semibold text-white'>{resolvedCount}</h1>
      <div>
-      <div className='absolute top-36 left-194'>
+      <div className='max-sm:hidden md:absolute top-36 left-194'>
       <img src={img1} alt="" />
     </div>
-    <div className='absolute transform scale-x-[-1] left-286 top-36'>
+    <div className='max-sm:hidden md:absolute transform scale-x-[-1] left-286 top-36'>
       <img src={img1} alt="" />
     </div>
     </div>  
